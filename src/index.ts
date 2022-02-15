@@ -66,6 +66,10 @@ export default defineInterface({
 							text: 'Header',
 						},
 						{
+							value: 'anchorTune',
+							text: 'Header Anchors',
+						},
+						{
 							value: 'list',
 							text: 'List (legacy)',
 						},
@@ -148,6 +152,10 @@ export default defineInterface({
 						{
 							value: 'raw',
 							text: 'Raw HTML',
+						},
+						{
+							value: 'button',
+							text: 'Button',
 						},
 					],
 				},

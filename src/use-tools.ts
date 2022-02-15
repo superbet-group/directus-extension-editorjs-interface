@@ -20,6 +20,8 @@ import ListTool from 'editorjs-list';
 import ImageTool from './custom-plugins/plugin-image-patch.js';
 import AttachesTool from './custom-plugins/plugin-attaches-patch.js';
 import PersonalityTool from './custom-plugins/plugin-personality-patch.js';
+import ButtonTool from 'editorjs-button';
+import AnchorBlockTune from './plugins/editorjs-anchor-main/src';
 
 export type UploaderConfig = {
 	addTokenToURL: (url: string, token: string) => string;
@@ -39,6 +41,7 @@ export default function useTools(
 	const fileRequiresTools = ['attaches', 'personality', 'image'];
 
 	const defaults: Record<string, any> = {
+		anchorTune: AnchorBlockTune,
 		header: {
 			class: HeaderTool,
 			shortcut: 'CMD+SHIFT+H',
@@ -131,6 +134,15 @@ export default function useTools(
 		alignmentTune: {
 			class: AlignmentTuneTool,
 		},
+		button: {
+			class: ButtonTool,
+			inlineToolbar: false,
+			config: {
+				css: {
+					btn: 'editorjs-button-btn',
+				},
+			},
+		},
 	};
 
 	for (const toolName of selection) {
@@ -152,6 +164,12 @@ export default function useTools(
 
 		if ('quote' in tools) {
 			tools.quote.tunes = ['alignmentTune'];
+		}
+	}
+
+	if ('anchorTune' in tools) {
+		if ('header' in tools) {
+			tools.header.tunes = ['anchorTune'];
 		}
 	}
 

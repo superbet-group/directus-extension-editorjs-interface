@@ -1,0 +1,18 @@
+
+/* Button block */
+.codex-editor .ce-block .editorjs-button-btn {
+    width: var(--v-button-width);
+    min-width: var(--v-button-min-width);
+    height: var(--v-button-height);
+    padding: 0 19px;
+    color: var(--v-button-color);
+    font-weight: var(--v-button-font-weight);
+    font-size: var(--v-button-font-size);
+    line-height: var(--v-button-line-height);
+    text-decoration: none;
+    background-color: var(--v-button-background-color);
+    border: var(--border-width) solid var(--v-button-background-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--fast) var(--transition);
+}

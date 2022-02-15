@@ -24,4 +24,10 @@ export default class extends ImageTool {
 			this.ui.fillImage(imageUrl);
 		}
 	}
+
+	save() {
+		const caption = this.ui.nodes.caption;
+		this._data.caption = caption.innerText.trim();
+		return this.data;
+	}
 }

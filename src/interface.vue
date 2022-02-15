@@ -267,3 +267,5 @@ export default defineComponent({
 <style src="./editorjs-ui.css"></style>
 <style src="./editorjs-components.css"></style>
 <style src="./editorjs-content-reset.css"></style>
+<style src="./custom.css"></style>
+<style src="./plugins/editorjs-anchor-main/src/index.css"></style>
