@@ -29,9 +29,8 @@
     "hidden": false
   },
   "scripts": {
-    "build": "directus-extension build",
-    "build-to-extension-folder": "directus-extension build -o ../extensions/interfaces/editorjs-3rd-party/index.js",
-    "dev": "directus-extension build -w --no-minify"
+    "build": "directus-extension build -o ../extensions/interfaces/editorjs-3rd-party/index.js",
+    "dev": "directus-extension build -w --no-minify -o ../extensions/interfaces/editorjs-3rd-party/index.js"
   },
   "files": [
     "dist"
