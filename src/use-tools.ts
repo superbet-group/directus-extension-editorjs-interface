@@ -49,7 +49,7 @@ export default function useTools(
 		},
 		list: {
 			class: ListTool,
-			inlineToolbar: false,
+			inlineToolbar: true,
 			shortcut: 'CMD+SHIFT+1',
 		},
 		nestedlist: {
